@@ -1,0 +1,19 @@
+{
+  "name": "zk-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create":"./scripts/create.sh",
+    "delete":"./scripts/delete.sh",
+    "ceremony":"./scripts/ceremony.sh",
+    "compile": "./scripts/compile.sh",
+    "prove": "./scripts/prove.sh",
+    "verify": "./scripts/verify.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "snarkjs": "^0.7.3"
+  }
+}
