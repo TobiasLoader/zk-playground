@@ -50,7 +50,6 @@ if [ -d $circuit_dir ]; then
 
       # create the proof
       npx snarkjs plonk prove "$proof_dir/circuit_final.zkey" "$proof_dir/witness.wtns" "$proof_dir/proof.json" "$proof_dir/public.json"
-
     else
       echo "Create the 'input.json' file in '$proof_dir'.\n"
     fi

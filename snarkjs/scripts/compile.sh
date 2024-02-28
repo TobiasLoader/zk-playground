@@ -24,21 +24,26 @@ if [ -d $circuit_dir ]; then
       # Compile the circuit
       circom "$circuit_dir/$circuit.circom" --r1cs --wasm --sym -o $compile_dir
 
-      echo "\n--------\n\nView information about the circuit...\n"
-
-      # View information about the circuit
-      npx snarkjs r1cs info "$compile_dir/$circuit.r1cs"
-
-      echo "\n--------\n\nPrint the constraints...\n"
-
-      # Print the constraints
-      npx snarkjs r1cs print "$compile_dir/$circuit.r1cs" "$compile_dir/$circuit.sym"
-      
-      echo "\n--------\n\nExport r1cs to json...\n"
-
-      # Export r1cs to json
-      npx snarkjs r1cs export json "$compile_dir/$circuit.r1cs" "$compile_dir/$circuit.r1cs.json"
-      cat "$compile_dir/$circuit.r1cs.json"
+      if [ $? -eq 0 ]; then
+          
+        echo "\n--------\n\nView information about the circuit...\n"
+  
+        # View information about the circuit
+        npx snarkjs r1cs info "$compile_dir/$circuit.r1cs"
+  
+        echo "\n--------\n\nPrint the constraints...\n"
+  
+        # Print the constraints
+        npx snarkjs r1cs print "$compile_dir/$circuit.r1cs" "$compile_dir/$circuit.sym"
+        
+        echo "\n--------\n\nExport r1cs to json...\n"
+  
+        # Export r1cs to json
+        npx snarkjs r1cs export json "$compile_dir/$circuit.r1cs" "$compile_dir/$circuit.r1cs.json"
+        # cat "$compile_dir/$circuit.r1cs.json"
+      else
+        exit 1
+      fi
     else
       echo "File 'circuit.circom' not found."
     fi
