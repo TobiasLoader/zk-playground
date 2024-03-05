@@ -19,4 +19,5 @@ if [ -d "circuits/$circuit" ]; then
   fi
 else
   echo "'circuits/$circuit' doesn't exist."
+  exit 1
 fi

@@ -5,4 +5,4 @@ snarkjs/circuits/*/compile/
 snarkjs/circuits/*/proofs/*/private/
 snarkjs/pot/
 
-!snarksjs/*/proofs/*/private/input.json
+!snarkjs/circuits/*/proofs/*/private/input.json
