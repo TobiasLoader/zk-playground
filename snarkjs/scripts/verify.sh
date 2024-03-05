@@ -21,7 +21,7 @@ proof_dir="$circuit_dir/proofs/$proof"
 
 if [ -d $circuit_dir ]; then
   if [ -d $proof_dir ]; then
-    if [ -f "$proof_dir/proof.json" ]; then
+    if [ -f "$proof_dir/public/proof.json" ]; then
     
       ###### Following README from https://github.com/iden3/snarkjs
       ###### ~ STEP 24
@@ -29,7 +29,7 @@ if [ -d $circuit_dir ]; then
       echo "\n--------\n\nVerify the proof...\n"
       
       # Verify the proof
-      npx snarkjs plonk verify "$proof_dir/verification_key.json" "$proof_dir/public.json" "$proof_dir/proof.json"
+      npx snarkjs plonk verify "$proof_dir/public/verification_key.json" "$proof_dir/public/public.json" "$proof_dir/public/proof.json"
     else
       echo "Execute 'npm run proof $circuit $proof'\n"
     fi

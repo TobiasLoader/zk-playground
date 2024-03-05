@@ -46,12 +46,15 @@ if [ -d $circuit_dir ]; then
       fi
     else
       echo "File 'circuit.circom' not found."
+      exit 1
     fi
   else
     echo "File 'pot_final.ptau' not found in '$compile_dir'."
     echo "Execute 'npm run ceremony' first.\n"
+    exit 1
   fi
 else
   echo "Directory '$circuit_dir' doesn't exist in 'zk-playground/snarkjs'."
   echo "Execute 'npm run create $circuit'.\n"
+  exit 1
 fi

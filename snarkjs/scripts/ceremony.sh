@@ -65,8 +65,10 @@ if [ -d "./circuits/$circuit" ]; then
     npx snarkjs powersoftau verify circuits/$circuit/compile/pot_final.ptau
   else
     echo "Directory '/circuits/$circuit/compile' doesn't exist in 'zk-playground/snarkjs'."
+    exit 1
   fi
 else
   echo "Directory '/circuits/$circuit' doesn't exist in 'zk-playground/snarkjs'."
   echo "Execute 'npm run create $circuit'.\n"
+  exit 1
 fi

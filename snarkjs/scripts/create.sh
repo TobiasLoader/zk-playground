@@ -16,5 +16,7 @@ else
   mkdir "circuits/$circuit/compile"
   mkdir "circuits/$circuit/proofs"
   mkdir "circuits/$circuit/proofs/proof1"
-  touch "circuits/$circuit/proofs/proof1/input.json"
+  mkdir "circuits/$circuit/proofs/proof1/private"
+  mkdir "circuits/$circuit/proofs/proof1/public"
+  touch "circuits/$circuit/proofs/proof1/private/input.json"
 fi

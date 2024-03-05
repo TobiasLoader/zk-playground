@@ -1,2 +1,8 @@
 node_modules
 .DS_STORE
+
+snarkjs/circuits/*/compile/
+snarkjs/circuits/*/proofs/*/private/
+snarkjs/pot/
+
+!snarksjs/*/proofs/*/private/input.json
