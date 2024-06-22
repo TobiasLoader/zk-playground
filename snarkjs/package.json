@@ -10,7 +10,8 @@
     "compile": "./scripts/compile.sh",
     "prove": "./scripts/prove.sh",
     "comprove": "./scripts/comprove.sh",
-    "verify": "./scripts/verify.sh"
+    "verify": "./scripts/verify.sh",
+    "list": "./scripts/list.sh"
   },
   "author": "",
   "license": "ISC",
