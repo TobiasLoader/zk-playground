@@ -1,8 +1,5 @@
 ## zkVM
 
-Navigate to the `/zkvm` directory
+Navigate to the `/zkvm` directory, then to the circuit directory:
 
-`cargo nexus new [name]`
-`cargo nexus run`
-`cargo nexus prove`
-`cargo nexus verify`
+`cargo run`

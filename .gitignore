@@ -11,4 +11,4 @@ nexus/circuits/*/.cargo
 nexus/circuits/*/target
 nexus/circuits/*/nexus-proof
 
-zkvm/target/
+zkvm/*/target/
